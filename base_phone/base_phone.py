@@ -45,8 +45,8 @@ class PhoneCommon(models.AbstractModel):
             context = {}
         if ids and isinstance(ids, (int, long)):
             ids = [ids]
-        if any([vals.get(field) for field in self._phone_fields]):
-            user = self.pool['res.users'].browse(cr, uid, uid, context=context)
+        user = self.pool['res.users'].browse(cr, uid, uid, context=context)
+        if any([vals.get(field) for field in self._phone_fields]) and user.company_id.automatic_phone_reformatting:
             # country_id on res.company is a fields.function that looks at
             # company_id.partner_id.addres(default).country_id
             countrycode = None

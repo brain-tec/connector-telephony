@@ -1,8 +1,8 @@
-# -*- coding: utf-8 -*-
+# b-*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    Base Phone module for OpenERP
-#    Copyright (C) 2014 Alexis de Lattre <alexis@via.ecp.fr>
+#    Copyright (c) 2016 brain-tec AG (http://www.braintec-group.com)
+#    All Right Reserved
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,8 +19,10 @@
 #
 ##############################################################################
 
-from . import base_phone
-from . import wizard
-from . import report_sxw_format
-from . import controller
-from . import res_company_ext
+from openerp import fields, models
+
+
+class ResCompanyExt(models.Model):
+    _inherit = 'res.company'
+
+    automatic_phone_reformatting = fields.Boolean(string="Enable automatic phone reformatting", default=True)

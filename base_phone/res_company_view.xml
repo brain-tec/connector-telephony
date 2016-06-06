@@ -17,6 +17,7 @@
         <group name="account_grp" position="after">
             <group name="phone" string="Phone">
                 <field name="number_of_digits_to_match_from_end" />
+                <field name="automatic_phone_reformatting" />
             </group>
         </group>
         <field name="phone" position="attributes">
