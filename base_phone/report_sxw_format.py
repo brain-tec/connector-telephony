@@ -21,7 +21,14 @@
 
 from openerp.osv import orm
 from openerp.report import report_sxw
-import phonenumbers
+import logging
+
+_logger = logging.getLogger(__name__)
+
+try:
+    import phonenumbers
+except ImportError:
+    _logger.debug('Cannot import phonenumbers')
 
 
 class base_phone_installed(orm.AbstractModel):
@@ -44,17 +51,20 @@ def format(
     if self.pool.get('base.phone.installed') and phone and text:
         # text should already be in E164 format, so we don't have
         # to give a country code to phonenumbers.parse()
-        phone_number = phonenumbers.parse(text)
-        if phone_format == 'international':
-            res = phonenumbers.format_number(
-                phone_number, phonenumbers.PhoneNumberFormat.INTERNATIONAL)
-        elif phone_format == 'national':
-            res = phonenumbers.format_number(
-                phone_number, phonenumbers.PhoneNumberFormat.NATIONAL)
-        elif phone_format == 'e164':
-            res = phonenumbers.format_number(
-                phone_number, phonenumbers.PhoneNumberFormat.E164)
-        else:
+        try:
+            phone_number = phonenumbers.parse(text)
+            if phone_format == 'international':
+                res = phonenumbers.format_number(
+                    phone_number, phonenumbers.PhoneNumberFormat.INTERNATIONAL)
+            elif phone_format == 'national':
+                res = phonenumbers.format_number(
+                    phone_number, phonenumbers.PhoneNumberFormat.NATIONAL)
+            elif phone_format == 'e164':
+                res = phonenumbers.format_number(
+                    phone_number, phonenumbers.PhoneNumberFormat.E164)
+            else:
+                res = text
+        except:
             res = text
     else:
         res = format_original(self, text, oldtag=oldtag)

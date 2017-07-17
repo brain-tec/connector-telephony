@@ -22,7 +22,7 @@
 
 {
     'name': 'Base Phone',
-    'version': '0.1',
+    'version': '8.0.0.1.0',
     'category': 'Phone',
     'license': 'AGPL-3',
     'summary': 'Validate phone numbers',
@@ -76,7 +76,6 @@ for any help or question about this module.
         'web_phone.xml',
         ],
     'qweb': ['static/src/xml/*.xml'],
-    'demo': ['base_phone_demo.xml'],
     'test': ['test/phonenum.yml'],
     'images': [],
     'installable': True,

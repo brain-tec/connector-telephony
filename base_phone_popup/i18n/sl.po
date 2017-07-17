@@ -1,22 +1,22 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* base_phone_popup
-#
-# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015.
+# * base_phone_popup
+# 
+# Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 7.0\n"
+"Project-Id-Version: connector-telephony (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-25 22:05+0000\n"
-"PO-Revision-Date: 2015-04-05 09:23+0200\n"
+"POT-Creation-Date: 2015-10-14 02:09+0000\n"
+"PO-Revision-Date: 2015-10-13 05:02+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
-"Language-Team: Slovenian <translate@matmoz.si>\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-connector-telephony-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
 "Language: sl\n"
-"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
 #. module: base_phone_popup
 #: code:addons/base_phone_popup/popup.py:49
@@ -33,10 +33,3 @@ msgstr "Pojavno okno ob prejemu klicev"
 #: model:ir.model,name:base_phone_popup.model_res_users
 msgid "Users"
 msgstr "Uporabniki"
-
-#. module: base_phone_popup
-#: model:ir.model,name:base_phone_popup.model_phone_common
-msgid "phone.common"
-msgstr "phone.common"
-
-

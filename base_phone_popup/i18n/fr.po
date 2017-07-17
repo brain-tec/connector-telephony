@@ -1,19 +1,21 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* base_phone_popup
-#
+# * base_phone_popup
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 7.0\n"
+"Project-Id-Version: connector-telephony (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-25 22:05+0000\n"
-"PO-Revision-Date: 2014-08-25 22:05+0000\n"
-"Last-Translator: Alexis de Lattre <alexis.delattre@akretion.com>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2015-10-14 02:09+0000\n"
+"PO-Revision-Date: 2015-10-12 18:36+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"Language-Team: French (http://www.transifex.com/oca/OCA-connector-telephony-8-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: base_phone_popup
 #: code:addons/base_phone_popup/popup.py:49
@@ -30,9 +32,3 @@ msgstr "Pop-up sur Appel Entrant"
 #: model:ir.model,name:base_phone_popup.model_res_users
 msgid "Users"
 msgstr "Utilisateurs"
-
-#. module: base_phone_popup
-#: model:ir.model,name:base_phone_popup.model_phone_common
-msgid "phone.common"
-msgstr "phone.common"
-

@@ -255,15 +255,15 @@ class asterisk_server(orm.Model):
                     break
                 # 6 = Up
                 if (
-                        chan.get('ChannelState') == '6'
-                        and sip_account in chan.get('BridgedChannel', '')):
+                        chan.get('ChannelState') == '6' and
+                        sip_account in chan.get('BridgedChannel', '')):
                     _logger.debug("Found a matching Event in 'Up' state")
                     calling_party_number = chan.get('CallerIDNum')
                     break
                 # Compatibility with Asterisk 1.4
                 if (
-                        chan.get('State') == 'Up'
-                        and sip_account in chan.get('Link', '')):
+                        chan.get('State') == 'Up' and
+                        sip_account in chan.get('Link', '')):
                     _logger.debug("Found a matching Event in 'Up' state")
                     calling_party_number = chan.get('CallerIDNum')
                     break
@@ -323,6 +323,7 @@ class res_users(orm.Model):
             "user."),
         'asterisk_chan_type': fields.selection([
             ('SIP', 'SIP'),
+            ('PJSIP', 'PJSIP'),
             ('IAX2', 'IAX2'),
             ('DAHDI', 'DAHDI'),
             ('Zap', 'Zap'),
@@ -421,7 +422,7 @@ class PhoneCommon(orm.AbstractModel):
                 _('No callerID configured for the current user'))
 
         variable = []
-        if user.asterisk_chan_type == 'SIP':
+        if user.asterisk_chan_type in ['SIP', 'PJSIP']:
             # We can only have one alert-info header in a SIP request
             if user.alert_info:
                 variable.append(
