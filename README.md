@@ -1,4 +1,7 @@
 
+[![Support the OCA](https://odoo-community.org/readme-banner-image)](https://odoo-community.org/get-involved?utm_source=repo-readme)
+
+# connector-telephony
 [![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/connector-telephony&target_branch=19.0)
 [![Pre-commit Status](https://github.com/OCA/connector-telephony/actions/workflows/pre-commit.yml/badge.svg?branch=19.0)](https://github.com/OCA/connector-telephony/actions/workflows/pre-commit.yml?query=branch%3A19.0)
 [![Build Status](https://github.com/OCA/connector-telephony/actions/workflows/test.yml/badge.svg?branch=19.0)](https://github.com/OCA/connector-telephony/actions/workflows/test.yml?query=branch%3A19.0)
@@ -6,8 +9,6 @@
 [![Translation Status](https://translation.odoo-community.org/widgets/connector-telephony-19-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/connector-telephony-19-0/?utm_source=widget)
 
 <!-- /!\ do not modify above this line -->
-
-# connector-telephony
 
 connector-telephony
 
@@ -17,7 +18,11 @@ connector-telephony
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[voip_oca](voip_oca/) | 19.0.1.0.0 | <a href='https://github.com/etobella'><img src='https://github.com/etobella.png' width='32' height='32' style='border-radius:50%;' alt='etobella'/></a> | Provides the use of Voip
 
 [//]: # (end addons)
 
